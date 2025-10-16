@@ -44,7 +44,8 @@ int arr[] = {5,3,7};
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
     This are the indexes               Elements as below  
-    (for code use Loop As above code)   (for code use inside loop : "arr[loop wali indexes]")        
+    (for code use Loop As above code)   (for code use inside loop : "arr[loop wali indexes]")  
+    (indexes for to go till location )  ( actual elements for any logic )
 _____________________________________________________________________________________________________________________________________________
 
     Index of i : 0                  { 5 }
