@@ -75,3 +75,37 @@ for(int i = 0; i < nums.length; i++) {
 > 👀 3 loops = result dikhake samjho
 
 
+#for 3 elements only of subarray
+
+public class MySubArray 
+{
+    public static void subarraySum(int[] arr) 
+    {
+        // print only subarrays with exactly 3 elements
+        for (int i = 0; i < arr.length; i++) 
+        {
+            for (int j = i; j < arr.length; j++) 
+            {
+                int length = j - i + 1;  // length of current subarray
+
+                // print only if length == 3
+                if (length == 3)
+                {
+                    System.out.print("{ ");
+                    for (int k = i; k <= j; k++) 
+                    {
+                        System.out.print(arr[k] + " ");
+                    }
+                    System.out.println("}");
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) 
+    {
+        int arr[] = {5, 3, 7};
+        subarraySum(arr);
+    }
+}
+
