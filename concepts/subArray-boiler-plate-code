@@ -1,0 +1,77 @@
+
+### 🔹 **2 loops (without visualization / direct calculation)**
+
+```java
+for(int i = 0; i < nums.length; i++) {
+    int sum = 0;
+    for(int j = i; j < nums.length; j++) {
+        sum += nums[j];       // direct calculation
+        // e.g., count or sum
+    }
+}
+```
+
+**Kya karta hai:**
+
+* Ye **subarrays ka result calculate karta hai** (sum, count, max, min)
+* **Actual subarrays ko manually print nahi karta**
+* Efficient (O(n²))
+* Industry me commonly use hota hai
+
+**Example:**
+`nums = [1,2,3], k=3`
+
+* Count of subarrays with sum=3 → 2
+* No need to print `[1,2]` ya `[3]` explicitly
+
+---
+
+### 🔹 **3 loops (with visualization / manual subarray build)**
+
+```java
+for(int i = 0; i < nums.length; i++) {
+    for(int j = i; j <= nums.length; j++) {
+        for(int m = i; m < j; m++) {
+            System.out.print(nums[m]+" ");  // build each subarray
+        }
+        System.out.println();
+    }
+}
+```
+
+**Kya karta hai:**
+
+* Ye **har subarray ko manually banata aur dikhata hai**
+* Learning/debugging ke liye best
+* Inefficient for large arrays (O(n³))
+
+**Example:**
+`nums = [1,2,3]` → Prints all subarrays:
+
+```
+1
+1 2
+1 2 3
+2
+2 3
+3
+```
+
+---
+
+### ✅ Easy Rule of Thumb:
+
+| Loops   | Purpose                               | Example                    |
+| ------- | ------------------------------------- | -------------------------- |
+| 2 loops | Calculation only (sum, count, max)    | Find total subarrays sum=k |
+| 3 loops | Visualization / manual subarray build | Print all subarrays        |
+
+---
+
+💡 **Mnemonic:**
+
+> “2 loops → think, 3 loops → see”
+> 🧠 2 loops = result calculate karo
+> 👀 3 loops = result dikhake samjho
+
+
